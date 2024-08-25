@@ -1,0 +1,360 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e6f2f5; /* Light background color that complements the header */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #7ec3da; /* Light blue background for the navbar */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fixed position to keep the navbar visible */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure the navbar is above other elements */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-left {
+    flex: 1;
+}
+
+.navbar-right {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar a {
+    color: #ffffff; /* White text color for navbar links */
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #f0f0f0; /* Slightly lighter color on hover for links */
+}
+
+.navbar-toggle {
+    display: none; /* Hidden by default */
+    font-size: 24px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* Header */
+.header {
+    background-color: #7ec3da;
+    color: #472b40;
+    padding: 40px 20px;
+    border-bottom-left-radius: 50% 40px;
+    border-bottom-right-radius: 50% 40px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-top: 2px solid #fff;
+}
+
+.header::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -20px; /* Adjust this value to move the curve up or down */
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: #7ec3da;
+    border-top-left-radius: 100% 50px;
+    border-top-right-radius: 100% 50px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.header-left {
+    font-size: 24px;
+}
+
+.header-center img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff; /* Add border to the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow to the image */
+}
+
+.header-right {
+    display: flex;
+    gap: 20px;
+}
+
+.header-right a {
+    color: #472b40; /* Dark text color for icons */
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header-right a:hover {
+    color: #3b2a3e; /* Slightly lighter color on hover for icons */
+}
+
+/* About Me section */
+.about-me {
+    text-align: center;
+    margin-top: 100px; /* Adjusted to provide space for fixed navbar */
+    padding: 40px;
+    background-color: #f9f9f9; /* Light gray background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Adjust the maximum width as per your preference */
+    margin-left: auto; /* Center the section horizontally */
+    margin-right: auto; /* Center the section horizontally */
+    position: relative;
+    overflow: hidden; /* Ensure background is contained within the section */
+}
+
+.about-me::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('path/to/your/background-image.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.1; /* Adjust opacity to make the background subtle */
+    z-index: -1; /* Ensure the background is behind the content */
+}
+
+.about-me h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-me h3 {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.about-me p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Skills section */
+.skills {
+    text-align: center;
+    margin: 100px auto 0; /* Center the skill section horizontally and add margin at the top for spacing */
+    max-width: 800px; /* Limit the maximum width to match the about me section */
+    position: relative; /* Ensure relative positioning for absolute elements */
+    background-color: #f6f6f6; /* Background color for the skills section */
+    padding: 40px; /* Add padding for better spacing */
+    border-radius: 10px; /* Add border radius for rounded corners */
+}
+
+.skills h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.skills h3 {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Skills container for arranging skill cards */
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adjust the gap between columns */
+}
+
+/* Individual columns for skills */
+.skills-left, .skills-middle, .skills-right {
+    flex-basis: calc(33.33% - 20px); /* 33.33% width for each column minus the gap */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adjust the gap between skills */
+}
+
+/* Styling for each skill card */
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+    cursor: pointer; /* Add pointer cursor to indicate interactivity */
+}
+
+/* Skill image */
+.skill img {
+    width: 80px; /* Fixed width */
+    height: 80px; /* Fixed height */
+    object-fit: contain;
+}
+
+/* Skill name */
+.skill span {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Hover effect on skill cards */
+.skill:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #7ec3da;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+    .navbar {
+        justify-content: flex-start; /* Align navbar links to the left */
+    }
+
+    .navbar-right {
+        display: none; /* Hide navbar links on the right */
+    }
+
+    .navbar-toggle {
+        display: block; /* Show the navbar toggle button */
+    }
+
+    .navbar-toggle i {
+        margin-right: 20px; /* Add some spacing after the bars icon */
+    }
+
+    .header {
+        padding-top: 80px; /* Adjust header padding to make space for the fixed navbar */
+    }
+
+    .header-content {
+        flex-direction: column; /* Stack header elements vertically */
+        align-items: center; /* Center align header content */
+    }
+
+    .header-left,
+    .header-right {
+        margin-top: 20px; /* Add margin between elements */
+    }
+
+    .header-center img {
+        margin-top: 20px; /* Add margin to center the image */
+    }
+
+    /* Mobile menu */
+    .navbar-right.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #2c3e50; /* Dark blue background for mobile menu */
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Mobile menu links */
+    .navbar-right.show a {
+        color: #ffffff;
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    .navbar-toggle i.fa-xmark {
+        display: none;
+    }
+    
+    .navbar-right.show + .navbar-toggle i.fa-xmark {
+        display: inline;
+    }
+    
+    .navbar-right.show + .navbar-toggle i.fa-bars {
+        display: none;
+    }
+
+    /* About Me section for mobile */
+    .about-me {
+        background-color: #f9f9f9;
+        padding: 40px 20px;
+        border-radius: 10px;
+        border: 1px solid #ccc; /* Add border */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-left: 2px solid #7ec3da; /* Add left border */
+        border-right: 2px solid #7ec3da; /* Add right border */
+    }
+
+    .skills-container {
+        flex-direction: column; /* Stack skills vertically */
+        align-items: center; /* Center align skills */
+    }
+
+    .skills-left, .skills-right {
+        flex-direction: row; /* Change to row for mobile view */
+        flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+        justify-content: center; /* Center align the skills */
+        gap: 10px; /* Adjust gap for mobile view */
+    }
+
+    .skill {
+        width: 100px; /* Adjust width for mobile view */
+        height: 100px; /* Adjust height for mobile view */
+    }
+
+    .skill img {
+        width: 60px; /* Adjust image size for mobile view */
+        height: 60px; /* Adjust image size for mobile view */
+    }
+
+    .skills h2 {
+        font-size: 28px; /* Adjust heading size for mobile view */
+    }
+
+    .skills h3 {
+        font-size: 20px; /* Adjust subheading size for mobile view */
+    }
+}

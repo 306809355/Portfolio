@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="#portfolio">Portfolio</a>
+        </div>
+        <div class="navbar-right">
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+
+    <div id="portfolio" class="anchor"></div> <!-- Anchor for Portfolio section -->
+
+    <div class="header">
+        <div class="header-content">
+            <div class="header-left" id="greeting-container">
+                <span id="dynamicGreeting">Hi, I'm <span id="dynamicName">Kumar</span></span>
+            </div>
+            <div class="header-center" id="image-container">
+                <img src="images/Kumar .jpg" alt="Kumar's Photo">
+            </div>
+            <div class="header-right" id="social-links">
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://leetcode.com" target="_blank"><i class="fas fa-code"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <div id="about" class="anchor"></div> <!-- Anchor for About Me section -->
+
+    <!-- About Me section -->
+    <section class="about-me">
+        <h2>About Me</h2>
+        <h3>- Who Am I -</h3>
+        <p>Welcome to my portfolio! I'm a second-year BTech Information Technology student at Sri Krishna College of Technology. Currently, I'm actively seeking a software developer internship to apply and enhance my skills in real-world projects.</p>
+    </section>
+
+    <div id="skills" class="anchor"></div> <!-- Anchor for Skills section -->
+
+    <!-- Skills section -->
+    <section class="skills">
+        <h2>Skills</h2>
+        <h3>- My Technical Skills -</h3>
+        <div class="skills-container">
+            <div class="skills-left">
+                <!-- HTML Skills -->
+                <div class="skill">
+                    <img src="images/html.png" alt="HTML">
+                    <span>HTML</span>
+                </div>
+                <div class="skill">
+                    <img src="images/css.png" alt="HTML">
+                    <span>CSS</span>
+                </div>
+                <div class="skill">
+                    <img src="images/javascript.png" alt="HTML">
+                    <span>JS</span>
+                </div>
+                  
+            </div>
+            <div class="skills-middle">
+                <!-- React Skills -->
+                <div class="skill">
+                    <img src="images/react.png" alt="React">
+                    <span>React</span>
+                </div>
+                <div class="skill">
+                    <img src="images/java.png" alt="React">
+                    <span>Java</span>
+                </div>
+                <div class="skill">
+                    <img src="images/spring-boot.jpg" alt="React">
+                    <span>Spring boot</span>
+                </div>
+            </div>
+            <div class="skills-right">
+                <!-- MySQL Skills -->
+                <div class="skill">
+                    <img src="images/mysql.jpg" alt="MySQL">
+                    <span>MySQL</span>
+                </div>
+                
+                <!-- AWS Skills -->
+                <div class="skill">
+                    <img src="images/aws.png" alt="AWS">
+                    <span>AWS</span>
+                </div>
+               
+            </div>
+        </div>
+        
+    </section>
+
+    <br><br>
+    <br><br>
+
+    <footer class="footer">
+        <p>&copy; 2024 Kumar. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for smooth scrolling and dynamic text -->
+    <script src="script.js"></script>
+</body>
+</html>
